@@ -1,0 +1,17 @@
+{
+    "name": "demonicious/flame",
+    "description": "A PHP MVC Micro-Framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mudassar Islam",
+            "email": "demoncious@gmail.com"
+        }
+    ],
+    "require": {
+        "jenssegers/blade": "^1.3",
+        "nikic/fast-route": "^1.3",
+        "clancats/hydrahon": "^1.1"
+    }
+}
