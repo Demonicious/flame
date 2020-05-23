@@ -31,7 +31,7 @@
             text-shadow: 0px 1px 0px black;
             font-size: 2rem;
             font-weight: 800;
-            padding: 15px 0;
+            padding: 30px 0;
             letter-spacing: 2px;
         }
 
@@ -59,7 +59,8 @@
 
 <?php $__env->startSection('content'); ?>
     <div class="container">
-        <span id="title">Flame. - A PHP Micro-Framework</span>
+        <img width="128" src="https://cdn1.iconfinder.com/data/icons/logos-3/304/codeigniter-icon-512.png" alt="logo" />
+        <span id="title">flame.</span>
         <div class="text">
             <p>Welcome to your new Flame Application.<br>This page confirms that the Framework was mounted successfully without any issues.</p>
             <br>
@@ -67,6 +68,10 @@
             <p>During development mode, You can check the JavaScript console to view page-render times.</p>
             <br>
             <p><a href="https://flame.github.io" target="_blank">Website & User-guide</a> • <a href="https://github.com/demonicious/flame" target="_blank">GitHub</a> • <a href="https://laravel.com/docs/5.8/blade" target="_blank">Laravel Blade Docs</a></p>
+            <br>
+            <p>
+                <p>Flame is a very small PHP Framework, that is built using Standalone & well-established modules.<br>It focuses on Performance & Ease-of-use. It is heavily inspired by <a href="https://codeigniter.com/" target="_blank">CodeIgniter</a> & uses similar practices.</p>
+            </p>
         </div>
     </div>
 <?php $__env->stopSection(); ?>
