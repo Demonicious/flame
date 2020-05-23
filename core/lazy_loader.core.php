@@ -48,7 +48,7 @@ class Flame {
     static function Helper($name) {
         global $config;
         if(file_exists(SYS_PATH.'/system/helpers/'.$name.'.helper.php')) {
-            require_once SYS_PATH.'/system/helpers/'.$name.'.php';
+            require_once SYS_PATH.'/system/helpers/'.$name.'.helper.php';
         } else if(APP_PATH.'/'. $config['paths']['helpers'] .'/'.$name.'.php') {
             require_once APP_PATH.'/'. $config['paths']['helpers'] .'/'.$name.'.helper.php';
         }

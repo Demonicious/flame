@@ -45,19 +45,10 @@ require_once CFG_PATH.'/paths.php';
 require_once CFG_PATH.'/routes.php';
 
 /* Start - Application Process */
-require_once SYS_PATH.'/initialize.core.php';
-require_once SYS_PATH.'/system/FormData.php';
-require_once SYS_PATH.'/system/FlameController.php';
-require_once SYS_PATH.'/system/FlameModel.php';
-require_once SYS_PATH.'/system/FlameView.php';
-if(!$is_dev) require_once SYS_PATH.'/lazy_loader.core.php';
-else require_once SYS_PATH.'/dev/lazy_loader.dev.core.php';
-
-foreach($config['autoload']['helpers'] as $helper) {
-    Flame::Helper($helper);
-}
-
-require_once SYS_PATH.'/router.core.php';
+    // App Initializer
+    require_once SYS_PATH.'/initialize.core.php';
+    // Route Dispatcher
+    require_once SYS_PATH.'/router.core.php';
 /* End - Application Process */
 
 if($is_dev) {

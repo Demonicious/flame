@@ -16,6 +16,5 @@
             <br>
             <p><a href="https://flame.github.io" target="_blank">Website & User-guide</a> • <a href="https://github.com/demonicious/flame" target="_blank">GitHub</a> • <a href="https://laravel.com/docs/5.8/blade" target="_blank">Laravel Blade Docs</a></p>
         </div>
-        <p>{{ is_https()  }}</p>
     </div>
 @endsection

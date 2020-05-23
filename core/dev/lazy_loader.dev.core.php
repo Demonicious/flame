@@ -72,7 +72,7 @@ class Flame {
         global $loaded;
         $bt = GetCaller(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2));
         if(file_exists(SYS_PATH.'/system/helpers/'.$name.'.helper.php')) {
-            require_once SYS_PATH.'/system/helpers/'.$name.'.php';
+            require_once SYS_PATH.'/system/helpers/'.$name.'.helper.php';
             array_push($loaded, array('type' => 'helpers', 'msg' => '[SYS HELPER] ' . $name . ' System Helper loaded by: ' . $bt->class . '::' . $bt->function.'.'));
         } else if(APP_PATH.'/'. $config['paths']['helpers'] .'/'.$name.'.php') {
             require_once APP_PATH.'/'. $config['paths']['helpers'] .'/'.$name.'.helper.php';

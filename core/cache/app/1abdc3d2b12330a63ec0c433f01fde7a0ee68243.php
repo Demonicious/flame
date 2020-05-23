@@ -16,7 +16,6 @@
             <br>
             <p><a href="https://flame.github.io" target="_blank">Website & User-guide</a> • <a href="https://github.com/demonicious/flame" target="_blank">GitHub</a> • <a href="https://laravel.com/docs/5.8/blade" target="_blank">Laravel Blade Docs</a></p>
         </div>
-        <p><?php echo e(is_https()); ?></p>
     </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp_new\htdocs\flame_public\app\views/homepage.blade.php ENDPATH**/ ?>
