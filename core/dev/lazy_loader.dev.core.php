@@ -54,7 +54,7 @@ class Flame {
     static function Library($name) {
         global $config;
         global $loaded;
-        require_once APP_PATH.'/'.$config['paths']['libraries'].$name.'.php';
+        require_once APP_PATH.'/'.$config['paths']['libraries'].'/'.$name.'.php';
         $bt = GetCaller(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2));
         array_push($loaded, array('type' => 'libraries', 'msg' => '[LIBRARY] ' . $name . ' Library loaded by: ' . $bt->class . '::' . $bt->function.'.'));
         $lib = new $name();

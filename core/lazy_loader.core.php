@@ -34,7 +34,7 @@ class Flame {
 
     static function Library($name) {
         global $config;
-        require_once APP_PATH.'/'.$config['paths']['libraries'].$name.'.php';
+        require_once APP_PATH.'/'.$config['paths']['libraries'].'/'.$name.'.php';
         $lib = new $name();
         return $lib;
     }
