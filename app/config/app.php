@@ -13,9 +13,11 @@ $config['app'] = array(
     ),
 );
 
+$config['base_url'] = '//demon.proj/'; // Set this to the Base URL of your Application.
+
 $config['autoload'] = array(
     'services'  => array(), // The names of Service: 'session', 'db'
     'models'    => array(), // The names of the user defined models.
     'libraries' => array(), // The names of the user defined libraries.
-    'helpers'   => array(), // The names of the user defined / core helpers.
+    'helpers'   => array('url'), // The names of the user defined / core helpers.
 );

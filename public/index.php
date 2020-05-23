@@ -3,6 +3,7 @@
 $is_dev = false;
 $start_time = null;
 $end_time = null;
+$loaded = array();
 
 require_once "../vendor/autoload.php";
 
@@ -11,7 +12,7 @@ require_once "../vendor/autoload.php";
     'PRODUCTION'
 */
 
-$env = getenv('FLAME_ENVIRONMENT') || 'DEVELOPMENT';
+$env = 'DEVELOPMENT';
 
 switch($env) {
     case 'DEVELOPMENT':
@@ -49,10 +50,16 @@ require_once SYS_PATH.'/system/FormData.php';
 require_once SYS_PATH.'/system/FlameController.php';
 require_once SYS_PATH.'/system/FlameModel.php';
 require_once SYS_PATH.'/system/FlameView.php';
-require_once SYS_PATH.'/lazy_loader.core.php';
+if(!$is_dev) require_once SYS_PATH.'/lazy_loader.core.php';
+else require_once SYS_PATH.'/dev/lazy_loader.dev.core.php';
+
+foreach($config['autoload']['helpers'] as $helper) {
+    Flame::Helper($helper);
+}
+
 require_once SYS_PATH.'/router.core.php';
 /* End - Application Process */
 
 if($is_dev) {
-    Flame::View('debug_script', $data = array('page_load' => (microtime(true) - $start_time)), true)->Render();
+    require_once SYS_PATH.'/dev/process.php';
 }
