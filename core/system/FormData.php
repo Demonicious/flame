@@ -10,13 +10,13 @@ class FormData {
         return $this;
     }
 
-    public function Get($v) {
-        $x = isset($this->_get[$v]) ? $this->_get[$v] : null;
-        return $x;
+    public function GET($v = null) {
+        if(!$v) return $this->_get;
+        return isset($this->_get[$v]) ? $this->_get[$v] : null;
     }
 
-    public function Post($v) {
-        $x = isset($this->_post[$v]) ? $this->_post[$v] : null;
-        return $x;
+    public function POST($v = null) {
+        if(!$v) return $this->_post;
+        return isset($this->_post[$v]) ? $this->_post[$v] : null;
     }
 }
