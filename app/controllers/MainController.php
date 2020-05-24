@@ -2,6 +2,8 @@
 
 class MainController extends FlameController {
     public function index() {
+        
+        // app/views/homepage.blade.php
         Flame::View('homepage')->Render();
     }
 }
