@@ -21,7 +21,7 @@ class FlameController {
         foreach($al_s as $service) { $this->$service = Flame::Service($service); }
     }
 
-    protected function getJSON($assoc = true) {
+    protected function GetJSON($assoc = true) {
         $data = json_decode(file_get_contents('php://input'), $assoc);
         return $data;
     }

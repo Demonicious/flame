@@ -1,13 +1,7 @@
 <?php defined('APP_PATH') || exit('Direct Access is Prohibited.');
 
 class FlameModel {
-    protected $session;
-    protected $db;
-
     public function __construct() {
-        $session = null;
-        $db = null;
-
         $al_s = Flame::ConfigItem('autoload')['services'];
         $al_l = Flame::ConfigItem('autoload')['libraries'];
 

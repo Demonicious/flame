@@ -13,7 +13,7 @@ function current_url() {
     return $url;
 }
 
-function current_uri() {
+function request_uri() {
     return $_SERVER['REQUEST_URI'];
 }
 
